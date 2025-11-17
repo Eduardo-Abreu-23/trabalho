@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LevelCorp - O Mundo Corporativo Gamificado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+    <div class="header-left">
+        <img src="img/levelcorplogo.png" alt="Logo LevelCorp" class="logo">
+    </div>
+
+    <nav class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#gameplay">Gameplay</a>
+        <a href="#equipe">Equipe</a>
+    </nav>
+
+    <button id="themeToggle" class="theme-btn">
+        <span class="sun">☀</span>
+        <span class="moon">🌙</span>
+    </button>
+</header>
+
+
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre-section">
+    <h2>Sobre a Level Corp</h2>
+
+    <p>
+        A Level Corp é um estúdio criativo dedicado a transformar imaginação em experiências digitais. 
+        Nosso trabalho nasce da paixão por jogos, design e tecnologia — uma combinação que guia cada 
+        detalhe dos nossos projetos.
+    </p>
+
+    <p>
+        Atuamos com a filosofia de que cada produto deve ser mais do que funcional: ele precisa ser 
+        marcante. Por isso, buscamos entregar interfaces modernas, jogabilidade intuitiva e mundos 
+        que prendem a atenção do jogador do início ao fim.
+    </p>
+
+    <p>
+        Nossa equipe une talento e inovação para criar ambientes imersivos, histórias envolventes e 
+        mecânicas pensadas para todos os públicos. Trabalhamos sempre com foco em qualidade, 
+        criatividade e evolução constante, acompanhando as novas tendências do universo digital.
+    </p>
+
+    <p>
+        A Level Corp representa mais do que um estúdio — é um espaço onde ideias ganham vida, 
+        onde cada projeto é tratado como uma experiência única e onde buscamos, a cada etapa, 
+        elevar o nível do que fazemos. Seja em um jogo, uma plataforma ou qualquer solução digital, 
+        nosso objetivo é entregar algo inesquecível.
+    </p>
+</section>
+
+
+ <!-- GAMEPLAY -->
+<section id="gameplay" class="gameplay section">
+  <div class="section-inner">
+    <header class="section-header">
+      <h2>Como funciona o gameplay</h2>
+      <p class="lead">Uma experiência gamificada que transforma desafios corporativos em evolução real — clara, prática e diversão com propósito.</p>
+    </header>
+
+    <!-- Top cards resumo -->
+    <div class="gp-cards">
+      <article class="gp-card">
+        <div class="gp-ico">🎯</div>
+        <h3>Missões Temáticas</h3>
+        <p>Desafios com objetivos claros que simulam problemas reais da empresa — decisão, execução e impacto.</p>
+      </article>
+
+      <article class="gp-card">
+        <div class="gp-ico">🗺️</div>
+        <h3>Fases & Progressão</h3>
+        <p>Campanhas divididas em fases: a cada etapa a complexidade sobe e surgem novas decisões estratégicas.</p>
+      </article>
+
+      <article class="gp-card">
+        <div class="gp-ico">🏆</div>
+        <h3>Pontos & Recompensas</h3>
+        <p>XP, badges e vantagens para equipes com melhor desempenho — feedback imediato e ranking.</p>
+      </article>
+
+      <article class="gp-card">
+        <div class="gp-ico">🧭</div>
+        <h3>Papéis & Rotatividade</h3>
+        <p>Roles rotativos (Líder, Analista, Implementador, Facilitador) para que todos treinem diferentes habilidades.</p>
+      </article>
+    </div>
+
+    <!-- Timeline / passo a passo -->
+    <div class="gp-timeline">
+      <div class="timeline-step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Formação do time</h4>
+          <p>Times de 3–7 pessoas escolhem papéis, alinham objetivos e definem cronograma curto.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Leitura da missão</h4>
+          <p>Os participantes recebem contexto, restrições e objetivo principal da missão.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Planejamento (5–10 min)</h4>
+          <p>Escolha de estratégia, divisão de tarefas e hipóteses rápidas para executar.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Execução (10–45 min)</h4>
+          <p>A equipe implementa, testa e entrega soluções no tempo determinado.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>Feedback & Pontuação</h4>
+          <p>Ao final, o facilitador aplica pontuação, feedback e recomendações para a próxima fase.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Exemplo de missão + scoring box -->
+    <div class="gp-flex">
+      <div class="gp-example card">
+        <h4>Missão Exemplo — "Lançamento Relâmpago"</h4>
+        <p><strong>Contexto:</strong> lançar MVP em 48h com recursos limitados.</p>
+        <p><strong>Decisões:</strong> escolher abordagem A/B/C, alocar time e definir rollback.</p>
+        <p><strong>Resultado esperado:</strong> entrega funcional + estratégia de mitigação.</p>
+      </div>
+
+      <aside class="gp-score card">
+        <h4>Sistema de Pontuação (XP)</h4>
+        <ul>
+          <li><strong>Resolução correta:</strong> +50 XP</li>
+          <li><strong>Boa colaboração:</strong> +20 XP</li>
+          <li><strong>Entrega rápida:</strong> +10 XP</li>
+          <li><strong>Erro crítico / impacto:</strong> -15 XP</li>
+        </ul>
+
+        <div class="badges">
+          <div class="badge">🏅 Estratégia</div>
+          <div class="badge">🤝 Colaboração</div>
+          <div class="badge">⚡ Agilidade</div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Resultados & relatório -->
+    <div class="gp-results">
+      <h4>Relatórios & Métricas</h4>
+      <p>Ao final da campanha, geramos relatório com: XP por membro, competências desenvolvidas, pontos fracos e recomendações práticas para RH e liderança.</p>
+    </div>
+
+  </div>
+</section>
+    <!-- SEÇÃO DA EQUIPE -->
+<section id="equipe" class="equipe">
+    <h2>Nosso Time</h2>
+    <p class="sub">A força criativa por trás da LevelCorp</p>
+
+    <div class="team-grid">
+
+        <!-- CARD MODELO — COPIE PARA CADA INTEGRANTE -->
+        <div class="team-card">
+            <div class="team-photo">
+                <!-- COLOQUE A FOTO DO INTEGRANTE -->
+                <img src="img/integrantes/bruno-eliezer.jpg" alt="Bruno Elieze">
+            </div>
+            <h3>Bruno Eliéze</h3>
+            <p class="funcao">Game Designer</p>
+        </div>
+
+        <div class="team-card">
+            <div class="team-photo">
+                <img src="img/integrantes/eryck-regis.jpg" alt="Eryck Regis">
+            </div>
+            <h3>Eryck Regis</h3>
+            <p class="funcao">Roteirista & Narrativa</p>
+        </div>
+
+        <div class="team-card">
+            <div class="team-photo">
+                <img src="img/integrantes/vinicius-viana.jpg" alt="Vinicius Viana">
+            </div>
+            <h3>Vinícius Viana</h3>
+            <p class="funcao">Designer de Experiência</p>
+        </div>
+
+        <div class="team-card">
+            <div class="team-photo">
+                <img src="img/integrantes/danilo-gondim.jpg" alt="Danilo Gondim">
+            </div>
+            <h3>Danilo Gondim</h3>
+            <p class="funcao">Desenvolvedor</p>
+        </div>
+
+        <div class="team-card">
+            <div class="team-photo">
+                <img src="img/integrantes/rafael.jpg" alt="Rafael de Jesus">
+            </div>
+            <h3>Rafael de Jesus</h3>
+            <p class="funcao">Especialista Corporativo</p>
+        </div>
+
+        <div class="team-card">
+            <div class="team-photo">
+                <img src="img/integrantes/lucas-henrique.jpg" alt="Lucas Henrique Souza">
+            </div>
+            <h3>Lucas Henrique Souza</h3>
+            <p class="funcao">Analista de Sistemas</p>
+        </div>
+
+        <div class="team-card">
+            <div class="team-photo">
+                <img src="img/integrantes/bruno-araujo.jpg" alt="Bruno Araujo">
+            </div>
+            <h3>Bruno Araújo</h3>
+            <p class="funcao">Produtor Criativo</p>
+        </div>
+
+        <div class="team-card">
+            <div class="team-photo">
+                <img src="img/integrantes/carlos-magno.jpg" alt="Carlos Magno">
+            </div>
+            <h3>Carlos Magno</h3>
+            <p class="funcao">Diretor Operacional</p>
+        </div>
+
+        <div class="team-card">
+            <div class="team-photo">
+                <img src="img/integrantes/eduardo.jpg" alt="Eduardo Silva Abreu">
+            </div>
+            <h3>Eduardo Silva Abreu</h3>
+            <p class="funcao">Desenvolvedor Front-end</p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 LevelCorp — Evolução corporativa em forma de jogo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

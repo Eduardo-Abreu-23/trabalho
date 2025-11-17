@@ -1,0 +1,557 @@
+/* ---------- PALETA ---------- */
+:root {
+--primary: #042941;
+--accent: #1a4d6d;
+--secondary: #a1d6b3;
+--bg-light: #f2f4f7;
+--bg-dark: #0a0a0a;
+--text-light: #ffffff;
+--text-dark: #1f1f1f;
+--card-light: rgba(255,255,255,0.35);
+--card-dark: rgba(30,30,30,0.4);
+}
+
+
+body {
+margin: 0;
+font-family: "Arial", sans-serif;
+background: var(--bg-light);
+color: var(--text-dark);
+transition: .3s;
+}
+
+
+body.dark {
+background: var(--bg-dark);
+color: var(--text-light);
+}
+
+
+/* --------------------------------------- */
+/* HEADER MODERNO                           */
+/* --------------------------------------- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    background: linear-gradient(135deg,#2C92D1, #1A4D6D );
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 18px rgba(0, 0, 0, 0.25);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Links */
+.nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .2s;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.nav a:hover { 
+    background-color: #2c92d1; 
+
+}
+
+
+/* BOTÃO MODO CLARO / ESCURO */
+
+
+.theme-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s ease;
+    font-size: 18px;
+}
+
+.theme-btn:hover {
+    background: rgba(255,255,255,0.5);
+}
+
+.theme-btn .sun { display: inline-block; }
+.theme-btn .moon { display: none; }
+
+/* No modo escuro */
+body.dark .theme-btn {
+    background: rgba(0,0,0,0.4);
+}
+
+body.dark .theme-btn .sun { display: none; }
+body.dark .theme-btn .moon { display: inline-block; }
+
+
+/* --- SEÇÃO SOBRE A LEVEL CORP --- */
+.sobre-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 60px 40px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+
+.sobre-section h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+
+    
+    background: linear-gradient(90deg, #1A4D6D, #2C92D1);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+.sobre-section p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+
+.light .sobre-section {
+    background: linear-gradient(135deg, rgba(0,0,0,0.04), rgba(0,0,0,0.02));
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.light .sobre-section h2 {
+    background: linear-gradient(90deg, #1A4D6D, #2C92D1);
+    -webkit-background-clip: text;
+}
+
+
+.dark .sobre-section {
+    background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+}
+
+
+
+/* ============================
+   GAMEPLAY (Como Jogar)
+============================ */
+
+/* Seção geral */
+.gameplay.section {
+  padding: 90px 5%;
+  background: var(--bg-light);         
+  color: var(--text-dark);
+  border-radius: 28px;
+  margin: 70px auto;
+  max-width: 1280px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+body.dark .gameplay.section {
+  background: var(--bg-dark);          
+  color: var(--text-light);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+}
+
+/* efeito de brilho diagonal */
+.gameplay.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05), transparent 60%);
+  pointer-events: none;
+}
+
+/* TÍTULO */
+.section-header h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.4);
+}
+
+/* Subtítulo */
+.section-header .lead {
+  margin-top: 12px;
+  font-size: 1.22rem;
+  color: rgba(255,255,255,0.88);
+  max-width: 760px;
+}
+
+/* CARDS RESUMO — topo */
+.gp-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+  margin: 45px 0 60px;
+}
+
+.gp-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 26px;
+  border-radius: 18px;
+  min-height: 140px;
+
+  transition: .28s ease;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
+
+.gp-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+}
+
+/* Ícone */
+.gp-ico {
+  font-size: 32px;
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(145deg, rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+  color: #1a4d6d;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.2);
+}
+
+/* Título card */
+.gp-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 6px;
+}
+
+/* Texto */
+.gp-card p {
+  color: rgba(255,255,255,0.88);
+  line-height: 1.55;
+}
+
+/* TIMELINE */
+.gp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-step {
+  display: flex;
+  gap: 18px;
+  background: rgba(255,255,255,0.05);
+  padding: 20px 22px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 5px 16px rgba(0,0,0,0.22);
+
+  transition: .25s ease;
+}
+
+.timeline-step:hover {
+  transform: translateX(6px);
+  box-shadow: 0 7px 20px rgba(0,0,0,0.26);
+}
+
+/* Número */
+.step-num {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffffff, #ffffff55);
+
+  color: #1a1a1a;
+  font-weight: 800;
+  font-size: 1.16rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* EXEMPLO + SCORE */
+.gp-flex {
+  display: flex;
+  gap: 24px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+/* Caixas */
+.card {
+  flex: 1 1 420px;
+  padding: 26px;
+  background: rgba(0,0,0,0.22);
+  border-radius: 18px;
+
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+
+  box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+}
+
+.card h4 {
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+/* BADGES */
+.badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.badge {
+  padding: 8px 14px;
+  font-weight: 700;
+  border-radius: 12px;
+
+  background: linear-gradient(90deg, #ffd27a, #ffb86b);
+  color: #2b2b2b;
+
+  box-shadow: 0 4px 12px rgba(255,200,120,0.35);
+}
+
+/* RESULTADOS */
+.gp-results {
+  margin-top: 32px;
+  background: rgba(255,255,255,0.07);
+
+  padding: 22px 26px;
+  border-radius: 18px;
+
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.14);
+
+  box-shadow: 0 10px 26px rgba(0,0,0,0.3);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .gp-flex {
+    flex-direction: column;
+  }
+
+  .timeline-step {
+    flex-direction: row;
+  }
+}
+
+
+
+/* LOGO */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* SEÇÃO DA EQUIPE */
+.equipe {
+    padding: 80px 0;
+    background-color: var(--bg-secao); /* mesmo background do Sobre */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.equipe h2 {
+    font-size: 2.6rem;
+    color: var(--texto-principal); /* ajusta para escuro/claro */
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.equipe .sub {
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+    margin-bottom: 50px;
+}
+
+/* GRID DOS CARDS */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* CARD */
+.team-card {
+    background-color: var(--card-bg); 
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s ease, background-color 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(66, 120, 255, 0.6);
+}
+
+/* FOTO */
+.team-photo {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.team-card:hover .team-photo img {
+    transform: scale(1.08);
+}
+
+/* NOME */
+.team-card h3 {
+    font-size: 1.3rem;
+    color: var(--texto-principal);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* FUNÇÃO */
+.team-card .funcao {
+    font-size: 0.95rem;
+    color: var(--texto-secundario);
+}
+
+/* -----------------------------------------------------------
+   CORREÇÃO COMPLETA DE CONTRASTE DA SEÇÃO GAMEPLAY 
+   FUNCIONA PERFECTO NO MODO CLARO E ESCURO
+----------------------------------------------------------- */
+
+/* 🎨 VARIÁVEIS PARA MUDAR A COR DINAMICAMENTE */
+:root {
+    --gp-title: #1f1f1f;
+    --gp-text: #333;
+    --gp-card-bg: rgba(0,0,0,0.05);
+    --gp-card-shadow: rgba(0,0,0,0.15);
+    --gp-step-bg: rgba(0,0,0,0.06);
+    --gp-step-number-bg: #2c92d1;
+    --gp-example-bg: rgba(0,0,0,0.06);
+    --gp-results-bg: rgba(0,0,0,0.05);
+}
+
+/* 🌙 DARK MODE */
+body.dark {
+    --gp-title: #ffffff;
+    --gp-text: rgba(255,255,255,0.85);
+    --gp-card-bg: rgba(255,255,255,0.06);
+    --gp-card-shadow: rgba(10,10,20,0.45);
+    --gp-step-bg: rgba(255,255,255,0.05);
+    --gp-step-number-bg: #ffffff;
+    --gp-example-bg: rgba(0,0,0,0.25);
+    --gp-results-bg: rgba(255,255,255,0.03);
+}
+
+/* -----------------------------------------------------------
+   APLICAÇÃO DOS NOVOS COLORES
+----------------------------------------------------------- */
+
+.section-header h2 {
+    color: var(--gp-title) !important;
+    text-shadow: none;
+}
+
+.section-header .lead {
+    color: var(--gp-text) !important;
+}
+
+/* TOP CARDS */
+.gp-card {
+    background: var(--gp-card-bg) !important;
+    color: var(--gp-title) !important;
+    box-shadow: 0 10px 30px var(--gp-card-shadow) !important;
+}
+
+.gp-card h3 {
+    color: var(--gp-title) !important;
+}
+
+.gp-card p {
+    color: var(--gp-text) !important;
+}
+
+/* Timeline */
+.timeline-step {
+    background: var(--gp-step-bg) !important;
+}
+
+.step-num {
+    background: var(--gp-step-number-bg) !important;
+    color: #000 !important;
+}
+
+.step-body h4 {
+    color: var(--gp-title) !important;
+}
+
+.step-body p {
+    color: var(--gp-text) !important;
+}
+
+/* Example & Score Cards */
+.card {
+    background: var(--gp-example-bg) !important;
+    color: var(--gp-title) !important;
+}
+
+.card p,
+.card li {
+    color: var(--gp-text) !important;
+}
+
+/* Badges */
+.badge {
+    color: #2b2b2b !important;
+}
+
+/* Results */
+.gp-results {
+    background: var(--gp-results-bg) !important;
+    color: var(--gp-title) !important;
+}
