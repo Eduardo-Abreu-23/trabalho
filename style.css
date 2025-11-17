@@ -27,9 +27,9 @@ color: var(--text-light);
 }
 
 
-/* --------------------------------------- */
-/* HEADER MODERNO                           */
-/* --------------------------------------- */
+
+/* HEADER MODERNO */
+
 
 .header {
     display: flex;
@@ -153,9 +153,7 @@ body.dark .theme-btn .moon { display: inline-block; }
 
 
 
-/* ============================
-   GAMEPLAY (Como Jogar)
-============================ */
+
 
 /* Seção geral */
 .gameplay.section {
@@ -177,7 +175,7 @@ body.dark .gameplay.section {
   box-shadow: 0 10px 40px rgba(0,0,0,0.35);
 }
 
-/* efeito de brilho diagonal */
+
 .gameplay.section::before {
   content: "";
   position: absolute;
@@ -186,14 +184,14 @@ body.dark .gameplay.section {
   pointer-events: none;
 }
 
-/* TÍTULO */
+
 .section-header h2 {
   font-size: 2.8rem;
   font-weight: 800;
   text-shadow: 0 4px 14px rgba(0,0,0,0.4);
 }
 
-/* Subtítulo */
+
 .section-header .lead {
   margin-top: 12px;
   font-size: 1.22rem;
@@ -201,7 +199,7 @@ body.dark .gameplay.section {
   max-width: 760px;
 }
 
-/* CARDS RESUMO — topo */
+
 .gp-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -226,7 +224,6 @@ body.dark .gameplay.section {
   box-shadow: 0 14px 34px rgba(0,0,0,0.35);
 }
 
-/* Ícone */
 .gp-ico {
   font-size: 32px;
   width: 55px;
@@ -242,7 +239,6 @@ body.dark .gameplay.section {
   box-shadow: 0 4px 12px rgba(255,255,255,0.2);
 }
 
-/* Título card */
 .gp-card h3 {
   font-size: 1.2rem;
   margin: 10px 0 6px;
@@ -254,7 +250,6 @@ body.dark .gameplay.section {
   line-height: 1.55;
 }
 
-/* TIMELINE */
 .gp-timeline {
   display: flex;
   flex-direction: column;
@@ -280,7 +275,7 @@ body.dark .gameplay.section {
   box-shadow: 0 7px 20px rgba(0,0,0,0.26);
 }
 
-/* Número */
+
 .step-num {
   width: 52px;
   height: 52px;
@@ -298,7 +293,7 @@ body.dark .gameplay.section {
   box-shadow: 0 6px 16px rgba(0,0,0,0.3);
 }
 
-/* EXEMPLO + SCORE */
+
 .gp-flex {
   display: flex;
   gap: 24px;
@@ -306,7 +301,7 @@ body.dark .gameplay.section {
   flex-wrap: wrap;
 }
 
-/* Caixas */
+
 .card {
   flex: 1 1 420px;
   padding: 26px;
@@ -324,7 +319,6 @@ body.dark .gameplay.section {
   font-size: 1.3rem;
 }
 
-/* BADGES */
 .badges {
   display: flex;
   gap: 10px;
@@ -343,7 +337,6 @@ body.dark .gameplay.section {
   box-shadow: 0 4px 12px rgba(255,200,120,0.35);
 }
 
-/* RESULTADOS */
 .gp-results {
   margin-top: 32px;
   background: rgba(255,255,255,0.07);
@@ -459,12 +452,6 @@ body.dark .gameplay.section {
     color: var(--texto-secundario);
 }
 
-/* -----------------------------------------------------------
-   CORREÇÃO COMPLETA DE CONTRASTE DA SEÇÃO GAMEPLAY 
-   FUNCIONA PERFECTO NO MODO CLARO E ESCURO
------------------------------------------------------------ */
-
-/* 🎨 VARIÁVEIS PARA MUDAR A COR DINAMICAMENTE */
 :root {
     --gp-title: #1f1f1f;
     --gp-text: #333;
@@ -488,10 +475,6 @@ body.dark {
     --gp-results-bg: rgba(255,255,255,0.03);
 }
 
-/* -----------------------------------------------------------
-   APLICAÇÃO DOS NOVOS COLORES
------------------------------------------------------------ */
-
 .section-header h2 {
     color: var(--gp-title) !important;
     text-shadow: none;
@@ -501,7 +484,7 @@ body.dark {
     color: var(--gp-text) !important;
 }
 
-/* TOP CARDS */
+
 .gp-card {
     background: var(--gp-card-bg) !important;
     color: var(--gp-title) !important;
@@ -534,7 +517,7 @@ body.dark {
     color: var(--gp-text) !important;
 }
 
-/* Example & Score Cards */
+
 .card {
     background: var(--gp-example-bg) !important;
     color: var(--gp-title) !important;
@@ -545,12 +528,12 @@ body.dark {
     color: var(--gp-text) !important;
 }
 
-/* Badges */
+
 .badge {
     color: #2b2b2b !important;
 }
 
-/* Results */
+
 .gp-results {
     background: var(--gp-results-bg) !important;
     color: var(--gp-title) !important;
